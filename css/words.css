@@ -1,0 +1,14 @@
+.container .word-div {
+    padding: 80px 40px 20px 10px;
+}
+.container .word-div p {
+    word-spacing: normal;
+    color: #000;
+    font-size: 12px;
+    font-family: "century gothic";
+    margin-bottom: 30px;
+    text-align: right;
+}
+.container .word-div p span{
+    line-height: 28px;
+}

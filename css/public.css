@@ -1,0 +1,281 @@
+i {
+    font-style: normal;
+}
+body{
+    overflow-x: hidden;
+}
+/*头部*/
+#header {
+    height: 179px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+/*主导航栏*/
+.navbar {
+    margin: 0;
+}
+
+.navbar-header {
+    width: 114px;
+    float: left;
+    padding-top: 72px;
+    padding-left: 25px;
+}
+
+.navbar-header .navbar-brand {
+    width: 114px;
+    padding: 0;
+}
+
+.nav-tabs {
+    float: right;
+    border: none;
+    padding-top: 130px;
+    margin-right: 20px;
+}
+
+.nav-tabs > li {
+    margin: 0 20px;
+}
+
+.nav-tabs > li > a {
+    height: 44px;
+    font-size: 12px;
+    color: #0c0000;
+    padding: 12px 0;
+}
+
+.nav-tabs > li > a:hover,
+.nav-tabs > li > a:focus {
+    color: #9e9e9e;
+    background: none;
+    border-color: transparent;
+    border-bottom: 1px solid #9e9e9e;
+}
+
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    color: #9e9e9e;
+    background: none;
+    border-color: transparent;
+    border-bottom: 1px solid #9e9e9e;
+}
+
+/*<=768px的固定导航栏*/
+#nav_fixed {
+    height: 58px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.25);
+}
+
+#nav_fixed .nav-tabs {
+    padding: 7px 8px 0 0;
+}
+
+#nav_fixed .nav-tabs > li > a {
+    color: #999;
+}
+
+#nav_fixed .nav-tabs > li > a:hover,
+#nav_fixed .nav-tabs > li > a:focus {
+    color: #002aff;
+    border-bottom: 1px solid #002aff;
+}
+
+#nav_fixed .nav-tabs > li.active > a,
+#nav_fixed .nav-tabs > li.active > a:hover,
+#nav_fixed .nav-tabs > li.active > a:focus {
+    color: #002aff;
+    border-bottom: 1px solid #002aff;
+}
+
+/*动画效果*/
+.move {
+    animation: change 1s ease 0s 1 forwards;
+}
+
+@keyframes change {
+    0% {
+        top: -100%;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+/*屏幕小于768px的导航栏*/
+.navbar-static-top {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.dropdown > .btn {
+    width: 100%;
+    color: #fff;
+    font-size: 12px;
+    background: #c4c4c4;
+    border: 1px solid #fff;
+    border-radius: 0;
+    padding: 11px 0 10px;
+    position: relative;
+}
+
+.open > .dropdown-toggle.btn-default {
+    color: #fff;
+    background-color: #9b9b9b;
+    border: 1px solid #fff;
+}
+
+.dropdown > .btn:hover {
+    background-color: #9b9b9b;
+    border: 1px solid #c4c4c4;
+}
+
+.btn > .icon-down {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    font-size: 21px;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    text-align: center;
+    list-style: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.dropdown-menu > li {
+    background: rgba(188, 188, 188, 0.66);
+    border-bottom: 1px solid #ffffff;
+}
+
+.dropdown-menu > li:hover {
+    background: rgba(173, 173, 173, 0.66);
+}
+
+.dropdown-menu > li > a {
+    padding: 7px 0 6px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+    color: #fff;
+    text-decoration: none;
+    background-color: inherit;
+}
+
+/*底部*/
+.footer {
+    margin: 80px 0 60px;
+}
+
+.footer > .container {
+    text-align: center;
+    font-size: 12px;
+}
+
+/*top按钮*/
+.fh-top {
+    position: fixed;
+    right: 15px;
+    top: 50%;
+    margin-top: -7px;
+    cursor: pointer;
+}
+
+.fh-top .top-logo {
+    width: 14px;
+    height: 14px;
+    display: block;
+    background-color: #002aff;
+    border-radius: 50%;
+    float: right;
+}
+
+.fh-top span {
+    float: left;
+    margin-right: -15px;
+    color: #002aff;
+    font-size: 12px;
+    font-weight: 700;
+    opacity: 0;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) 0s;
+}
+
+.fh-top:hover span {
+    opacity: 1;
+    margin-right: 8px;
+}
+
+@media (max-width: 768px) {
+    #header .navbar-header {
+        margin-left: auto;
+        margin-right: auto;
+        float: none;
+        padding-left: 15px;
+        padding-top: 77px;
+    }
+
+    #header .navbar-header .navbar-brand {
+        width: 95px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 760px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 990px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1020px;
+    }
+}
+
+/*icon字体*/
+@font-face {
+    font-family: "iconfont";
+    src: url('../font/iconfont.eot?t=1479698421168'); /* IE9*/
+    src: url('../font/iconfont.eot?t=1479698421168#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../font/iconfont.woff?t=1479698421168') format('woff'), /* chrome, firefox */ url('../font/iconfont.ttf?t=1479698421168') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/ url('../font/iconfont.svg?t=1479698421168#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-down:before {
+    content: "\e61f";
+}
